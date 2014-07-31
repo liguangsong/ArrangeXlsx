@@ -1,0 +1,66 @@
+
+%button(style="margin-right:20px" )
+  = link_to 'Excel2', arrange_show_excle2_path
+%button(style="margin-right:20px;float:right" )
+  = link_to 'back', arrange_index_path
+%div(style="margin-left:40%" )
+  %span(style="margin-right:18px" )
+    =@excle_date.name
+  %span(style="margin-right:18px" )
+    =@excle_date.number
+  %span(style="margin-right:18px" )
+    =@excle_date.status
+%table(class="table table-style user-table" )
+  %tbody
+    %tr
+      %th 编号
+      %th 日期
+      %th 开盘
+      %th 最高
+      %th 最低
+      %th 收盘
+      %th 成交量
+      %th 成交额
+      %th 成交笔数
+      %th MA1
+      %th MA2
+      %th MA3
+      %th MA4
+      %th MA5
+      %th MA6
+    %br
+      %ul
+        -i=0
+        -@excle1_date_list.each do |t|
+          %tr
+            -i=i+1;
+            %th
+              =i
+            %th
+              =t.a_date
+            %th
+              =t.b_opening
+            %th
+              =t. c_max
+            %th
+              =t.d_min
+            %th
+              =t.e_close
+            %th
+              =t.f_volume
+            %th
+              =t.g_turnover
+            %th
+              =t.h_traded_items
+            %th
+              =t.i_ma1
+            %th
+              =t.j_ma2
+            %th
+              =t.k_ma3
+            %th
+              =t.l_ma4
+            %th
+              =t.m_ma5
+            %th
+              =t.n_ma6
